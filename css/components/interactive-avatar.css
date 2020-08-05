@@ -1,0 +1,14 @@
+.interactive-avatar {
+  width: 80px;
+  height: 80px;
+  border: 6px solid #0f5a47;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.interactive-avatar__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
