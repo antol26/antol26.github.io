@@ -1,16 +1,24 @@
-
-
 .hero {
     background: url("../../img/icons/bigleaf.png") right bottom no-repeat;
     background-color: #61c4d9;
     height: 100vh;
-    min-height: 650px;
+    min-height: rem(650px);
     color:  #fff;
     position: relative;
 
+    @include tablets {
+        background-position: right bottom 88%;
+    }
+
+    &:before, &:after {
+        @include tablets {
+            display: none;
+        }
+    }
+
     &:before {
         position: absolute;
-        bottom: -40px;
+        bottom: rem(-40px);
         left: 2%;
         content: url("../../img/icons/leaf3.png");
     }
@@ -18,7 +26,7 @@
     &:after {
        content: url("../../img/berry/berry1.png"); //url("../../img/berry/leaf2.png"), url("../../img/berry/berry2.png"), url("../../img/berry/leaf1.png");
        position: absolute;
-       bottom: 40px;
+       bottom: rem(40px);
        right: 30%;
     }
 }
@@ -28,44 +36,93 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: 24px 0 45px  ;
+    padding: rem(24px) 0 rem(45px)  ;
     background: url("../../img/icons/chocolates.png") right center / 50% auto no-repeat;
 
+    @include tablets {
+        background: none;
+    }
+
+    &:before, &:after {
+        @include tablets {
+            display: none;
+        }
+    } 
+        
     &:before {
         content: url("../../img/berry/berry2.png");
         position: absolute;
-        bottom: -40px;
+        bottom: rem(-40px);
         right: 10%;
     }
     
     &:after {
         content: url("../../img/berry/leaf2.png");
         position: absolute;
-        bottom: -40px;
+        bottom: rem(-40px);
         right: 30%;
     }
 }
 
 .hero__title-section {
     width: 46%;
+
     &:after {
         content: url("../../img/berry/leaf1.png");
         position: absolute;
         bottom: 20%;
         right: 12%;
     }
+
+    @include tablets {
+        width: 100%;       
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &::before {
+            content: "";
+            width: rem(316px);
+            height: rem(330px);
+            background: url("../../img/icons/batonch768.png") center center / contain no-repeat;
+            margin-bottom: rem(16px);
+        }
+    }
+
+    &:after {
+        @include tablets {
+            content: none;
+        }
+    }
 }
 
 .hero__main-title {
-    font-size: 48px;
+    font-size: rem(48px);
     line-height: 1.1;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
     text-transform: uppercase;
 }
 
 .hero__title-desc {
-    font-size: 21px;
-    margin-bottom: 28px;  
+    font-size: rem(21px);
+    margin-bottom: rem(28px);  
     padding-right: 10%;  
+
+    @include tablets {
+        padding: 0 25%;
+    }
+
+    @include phones {
+        padding: 0 16%;
+    }
+}
+
+.hero__icons-section {
+    @include tablets {
+        display: none;
+    }
 }
