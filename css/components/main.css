@@ -191,6 +191,10 @@ img {
   white-space: nowrap;
 }
 
+.phone-number__text-green {
+  color: #497870;
+}
+
 .hero {
   background: url("../../img/icons/bigleaf.png") right bottom no-repeat;
   background-color: #61c4d9;
@@ -322,6 +326,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 0;
 }
 .section--font-color--green {
   color: #0b4d3c;
@@ -337,6 +342,11 @@ img {
   text-align: center;
   text-transform: uppercase;
   color: #000;
+}
+
+.map__section {
+  position: relative;
+  background: url("../../img/map.png");
 }
 
 .headline {
@@ -451,7 +461,7 @@ img {
   position: relative;
   background: url("../../img/icons/uzorleaf.png") left top 57% no-repeat;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .benefits-section {
     background: none;
   }
@@ -462,7 +472,7 @@ img {
   bottom: -4.4444444444rem;
   left: 0;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .benefits-section:before {
     display: none;
   }
@@ -707,6 +717,11 @@ img {
   right: 3%;
   z-index: 100;
 }
+@media screen and (max-width: 768px) {
+  .fixed-menu {
+    display: none;
+  }
+}
 
 .fixed-menu__item {
   margin-bottom: 0.2777777778rem;
@@ -784,4 +799,56 @@ img {
   background: #fff;
   height: 4px;
   border-radius: 10px;
+}
+
+.footer {
+  position: absolute;
+  top: 38.8888888889rem;
+  width: 100%;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: auto;
+}
+.footer__container:last-child {
+  margin-left: 0%;
+}
+
+.footer__contacts {
+  justify-content: flex-start;
+}
+
+.social__item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.footer__social {
+  justify-content: flex-end;
+}
+
+.vk__icon {
+  width: 20px;
+  height: 11px;
+}
+
+.fb__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.inst__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.tw__icon {
+  width: 20px;
+  height: 17px;
 }

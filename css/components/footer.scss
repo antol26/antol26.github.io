@@ -1,0 +1,50 @@
+.footer {
+    position: absolute;
+    top: rem(700px);
+    width: 100%;       
+}
+
+.footer__container{
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5%; 
+    padding-right: 5%;
+    margin-top: auto;
+    &:last-child {
+        margin-left: 0%;
+    }
+}
+.footer__contacts {
+    justify-content: flex-start;
+}
+
+.social__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.footer__social {
+    justify-content: flex-end;
+       }
+
+.vk__icon {
+    width: 20px;
+    height: 11px;
+}
+
+.fb__icon {
+    width: 20px;
+    height: 20px;
+}
+
+.inst__icon {
+    width: 20px;
+    height: 20px;
+}
+
+.tw__icon {
+    width: 20px;
+    height: 17px;
+}

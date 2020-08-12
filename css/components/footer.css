@@ -1,0 +1,14 @@
+.footer {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.footer__contacts {
+  justify-content: flex-start;
+}
+
+.footer__social {
+  justify-content: flex-end;
+}
