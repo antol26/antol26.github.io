@@ -1,22 +1,35 @@
 .footer {
-    position: absolute;
-    top: rem(700px);
-    width: 100%;       
+   position: absolute;
+   bottom: 0;
+   width: 100%;  
+   background: #fff;     
+   padding: 30px, 0;
 }
 
 .footer__container{
     display: flex;    
     align-items: center;
-    justify-content: space-between;
-    padding-left: 5%; 
-    padding-right: 5%;
-    margin-top: auto;
-    &:last-child {
-        margin-left: 0%;
+    justify-content: space-between;  
+    
+    @include phones {
+        display: flex;
+        flex-direction: column;
     }
 }
+
 .footer__contacts {
+    display: flex;
     justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.phone-number__text-green {
+    @include tablets {
+        //display: none;
+       // align-items: center;
+    }
 }
 
 .social__item {
@@ -29,22 +42,12 @@
     justify-content: flex-end;
        }
 
-.vk__icon {
-    width: 20px;
-    height: 11px;
-}
-
-.fb__icon {
+.social__icon {
     width: 20px;
     height: 20px;
+    fill: #B3B3B3;
 }
 
-.inst__icon {
-    width: 20px;
-    height: 20px;
-}
-
-.tw__icon {
-    width: 20px;
-    height: 17px;
+.social__link:hover .social__icon{
+    fill: #000;
 }

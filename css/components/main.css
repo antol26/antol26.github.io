@@ -5,12 +5,12 @@ html {
 }
 @media screen and (max-width: 768px) {
   html {
-    font-size: 17px px;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 480px) {
   html {
-    font-size: 16px px;
+    font-size: 12px;
   }
 }
 
@@ -150,6 +150,12 @@ img {
 
 @media screen and (max-width: 768px) {
   .phone-number.header__phone-number {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .phone-number {
     display: none;
   }
 }
@@ -338,14 +344,13 @@ img {
 .section__title {
   font-size: 2.6666666667rem;
   font-weight: bold;
-  margin-bottom: 3.3333333333rem;
+  margin-bottom: 2.7777777778rem;
   text-align: center;
   text-transform: uppercase;
   color: #000;
 }
 
-.map__section {
-  position: relative;
+.map {
   background: url("../../img/map.png");
 }
 
@@ -591,7 +596,7 @@ img {
 @media screen and (max-width: 768px) {
   .form {
     flex-direction: column;
-    padding: 0 19%;
+    padding: 0 0;
   }
 }
 @media screen and (max-width: 480px) {
@@ -629,7 +634,7 @@ img {
 .form__input {
   width: 100%;
   border: none;
-  padding: 1rem 0.6111111111rem;
+  padding: 0.6666666667rem 0.6111111111rem;
   border: solid 0.1666666667rem transparent;
 }
 .form__input--textarea {
@@ -803,24 +808,30 @@ img {
 
 .footer {
   position: absolute;
-  top: 38.8888888889rem;
+  bottom: 0;
   width: 100%;
+  background: #fff;
+  padding: 30px, 0;
 }
 
 .footer__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-top: auto;
 }
-.footer__container:last-child {
-  margin-left: 0%;
+@media screen and (max-width: 480px) {
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .footer__contacts {
+  display: flex;
   justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .social__item {
@@ -833,22 +844,16 @@ img {
   justify-content: flex-end;
 }
 
-.vk__icon {
-  width: 20px;
-  height: 11px;
-}
-
-.fb__icon {
+.social__icon {
   width: 20px;
   height: 20px;
+  fill: #B3B3B3;
 }
 
-.inst__icon {
-  width: 20px;
-  height: 20px;
+.social__link:hover .social__icon {
+  fill: #000;
 }
 
-.tw__icon {
-  width: 20px;
-  height: 17px;
+.fb__icon:hover {
+  background: url("../../img/vector/fbh.svg") right center/50% auto no-repeat;
 }

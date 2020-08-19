@@ -3,7 +3,7 @@
     
     @include tablets {
     flex-direction: column;
-    padding: 0 19%;}
+    padding: 0 0;}
 
     @include phones {
         padding: padding 0;
@@ -40,7 +40,7 @@
 .form__input {
     width: 100%;
     border: none;
-    padding: rem(18px) rem(11px);
+    padding: rem(12px) rem(11px);
     border: solid rem(3px) transparent;
     //border: solid rem(3px) #dee2bd;
 
@@ -51,9 +51,9 @@
 
     &:focus {
         border-color: #dee2bd;
-        outline: none;
+        outline: none;}
+
     }
-}
 
 .form__controls {
     display: flex;

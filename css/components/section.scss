@@ -18,13 +18,12 @@
 .section__title {
     font-size: rem(48px);
     font-weight: bold;
-    margin-bottom: rem(60px);
+    margin-bottom: rem(50px);
     text-align: center;
     text-transform: uppercase;
     color: #000;
 }
 
-.map__section {
-    position: relative;    
-    background: url("../../img/map.png");
+.map {      
+    background: url("../../img/map.png");         
 }
