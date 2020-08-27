@@ -46,6 +46,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+h3 {
+  font-size: 1.2222222222rem;
+}
+
 table {
   border-collapse: collapse;
 }
@@ -514,6 +518,28 @@ img {
   top: -3.6111111111rem;
 }
 
+.reviews__list {
+  position: relative;
+  min-height: 280px;
+}
+
+.reviews__item.active {
+  position: static;
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.reviews__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  opacity: 0;
+}
+
 .reviews__display-inner {
   display: flex;
 }
@@ -564,7 +590,7 @@ img {
   color: black;
 }
 
-.reviews__switcher {
+.reviews-switcher {
   display: flex;
   justify-content: center;
 }
@@ -811,7 +837,7 @@ img {
   bottom: 0;
   width: 100%;
   background: #fff;
-  padding: 30px, 0;
+  padding: 30px 0;
 }
 
 .footer__container {
@@ -856,4 +882,226 @@ img {
 
 .fb__icon:hover {
   background: url("../../img/vector/fbh.svg") right center/50% auto no-repeat;
+}
+
+.slider {
+  background: #F8FAF9;
+  height: 100vh;
+  width: 100%;
+}
+
+.slider__container {
+  width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider__item {
+  width: 100%;
+  height: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.slider__left {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  cursor: pointer;
+}
+
+.slider__right {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  cursor: pointer;
+}
+
+.slider__logo {
+  margin: 5.5555555556rem 5.5555555556rem;
+}
+
+.img__nav-bg {
+  position: relative;
+  background: #86C3D7;
+  height: 5rem;
+  width: 5rem;
+}
+
+.item__nav__cmpnd {
+  position: absolute;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 0.7777777778rem;
+}
+
+.item__nav__icon {
+  position: absolute;
+  width: 2.5555555556rem;
+  height: 2.5555555556rem;
+  top: 25%;
+  left: 25%;
+}
+
+.slider__list {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  transition: 0.5s all ease-out;
+}
+
+.slider__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.slider-title {
+  font-weight: bold;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #292929;
+  margin-top: 25px;
+}
+
+.slider-description {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #666666;
+  margin-top: 24px;
+  max-width: 365px;
+  position: relative;
+}
+
+.item__nav-list {
+  position: absolute;
+  background: #efebeb;
+  width: 15.1666666667rem;
+  height: 19.1111111111rem;
+  padding: 30px 30px;
+  display: flex;
+  opacity: 0.5;
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px 20px;
+}
+
+.nav__item-dscr {
+  font-size: 16px;
+}
+
+.item__logo {
+  margin-right: 20px;
+}
+
+.slider__slide-title {
+  font-family: Alegreya Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.7777777778rem;
+  color: #292929;
+  text-transform: uppercase;
+}
+
+.specifications__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.specifications__value {
+  font-weight: bold;
+}
+
+.cost__cost {
+  text-transform: uppercase;
+  font-size: 3.3333333333rem;
+  margin-right: 20px;
+}
+
+.cost__container {
+  display: flex;
+}
+
+.cost__button {
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 800;
+}
+
+.btn--theme--slider {
+  background: #497870;
+  margin: 2%;
+}
+
+.team--version--mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .team--version--mobile {
+    display: flex;
+  }
+}
+.team {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .team {
+    padding: 0 10%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.team__item {
+  flex: 1;
+  text-align: center;
+  margin-right: 20px;
+  max-width: 14.4444444444rem;
+  position: relative;
+}
+
+.team__member {
+  height: 288px;
+  margin-bottom: 20px;
+}
+
+.team__title {
+  color: #323232;
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  border: none;
+  font-weight: bold;
+}
+
+.team__content {
+  overflow: hidden;
+  transition: height 0.3s;
+  height: 0;
+}
+
+.team--version--desktop .team__content {
+  position: absolute;
+  top: 100%;
 }

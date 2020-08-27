@@ -1,0 +1,55 @@
+.team--version--mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+.team--version--mobile {
+    display: flex;}
+}
+
+
+.team {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+.team {
+    padding: 0 10%;
+    flex-direction: column;
+    align-items: center;}
+}
+
+.team__item {
+    flex: 1;
+    text-align: center;
+    margin-right: 20px;
+    max-width: rem(260px);
+    position: relative;
+}
+
+.team__member {
+    height: 288px;
+    margin-bottom: 20px;
+}
+
+.team__title {
+    color: #323232;
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    border: none;
+    font-weight: bold;
+}
+
+.team__content {
+    overflow: hidden;
+    transition: height .3s;
+    height: 0;
+}
+
+.team--version--desktop .team__content {
+    position: absolute;
+    top: 100%;
+}
+
